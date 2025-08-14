@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construction of a transfer learning-based depression detection model for femalebreast cancer patients: text sentiment analysis - PMC</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", "Noto Sans TC", sans-serif;
+      max-width: 720px;
+      margin: 2em auto;
+      padding: 0 1em;
+      color: #333;
+      line-height: 1.8;
+      background: #fff;
+    }
+    h1, h2, h3 {
+      text-align: center;
+      color: #222;
+    }
+    .lang-switcher {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .lang-btn {
+      margin: 0 0.5em;
+      padding: 0.4em 1em;
+      border: none;
+      background-color: #eee;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .lang-btn.active {
+      background-color: #007acc;
+      color: white;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .share-block {
+      text-align: center;
+      margin: 1em 0 2em;
+      font-size: 0.95em;
+    }
+    .share-block a svg {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0.4em;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+    .share-block a svg:hover {
+      transform: scale(1.2);
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Construction of a transfer learning-based depression detection model for femalebreast cancer patients: text sentiment analysis - PMC</h1>
+  
+  <div class="share-block">
+    <span>🔗 分享這篇摘要：</span>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Farticles%2Fconstruction-of-a-transfer-learningbased-depression-detection-model-for-femalebreast-cancer-patients-text-sentiment-analysis-pmc-summary.html" target="_blank" title="Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+    </a>
+    <a href="https://x.com/intent/tweet?url=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Farticles%2Fconstruction-of-a-transfer-learningbased-depression-detection-model-for-femalebreast-cancer-patients-text-sentiment-analysis-pmc-summary.html&text=Construction%20of%20a%20transfer%20learning-based%20depression%20detection%20model%20for%20femalebreast%20cancer%20patients%3A%20text%20sentiment%20analysis%20-%20PMC" target="_blank" title="X">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+<path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path></svg>
+    </a>
+    <a href="https://www.threads.net/intent/post?url=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Farticles%2Fconstruction-of-a-transfer-learningbased-depression-detection-model-for-femalebreast-cancer-patients-text-sentiment-analysis-pmc-summary.html&text=Construction%20of%20a%20transfer%20learning-based%20depression%20detection%20model%20for%20femalebreast%20cancer%20patients%3A%20text%20sentiment%20analysis%20-%20PMC" target="_blank" title="Threads">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM294.2 244.3c19.5 9.3 33.7 23.5 41.2 40.9c10.4 24.3 11.4 63.9-20.2 95.4c-24.2 24.1-53.5 35-95.1 35.3h-.2c-46.8-.3-82.8-16.1-106.9-46.8C91.5 341.8 80.4 303.7 80 256v-.1-.1c.4-47.7 11.5-85.7 33-113.1c24.2-30.7 60.2-46.5 106.9-46.8h.2c46.9 .3 83.3 16 108.2 46.6c12.3 15.1 21.3 33.3 27 54.4l-26.9 7.2c-4.7-17.2-11.9-31.9-21.4-43.6c-19.4-23.9-48.7-36.1-87-36.4c-38 .3-66.8 12.5-85.5 36.2c-17.5 22.3-26.6 54.4-26.9 95.5c.3 41.1 9.4 73.3 26.9 95.5c18.7 23.8 47.4 36 85.5 36.2c34.3-.3 56.9-8.4 75.8-27.3c21.5-21.5 21.1-47.9 14.2-64c-4-9.4-11.4-17.3-21.3-23.3c-2.4 18-7.9 32.2-16.5 43.2c-11.4 14.5-27.7 22.4-48.4 23.5c-15.7 .9-30.8-2.9-42.6-10.7c-13.9-9.2-22-23.2-22.9-39.5c-1.7-32.2 23.8-55.3 63.5-57.6c14.1-.8 27.3-.2 39.5 1.9c-1.6-9.9-4.9-17.7-9.8-23.4c-6.7-7.8-17.1-11.8-30.8-11.9h-.4c-11 0-26 3.1-35.6 17.6l-23-15.8c12.8-19.4 33.6-30.1 58.5-30.1h.6c41.8 .3 66.6 26.3 69.1 71.8c1.4 .6 2.8 1.2 4.2 1.9l.1 .5zm-71.8 67.5c17-.9 36.4-7.6 39.7-48.8c-8.8-1.9-18.6-2.9-29-2.9c-3.2 0-6.4 .1-9.6 .3c-28.6 1.6-38.1 15.5-37.4 27.9c.9 16.7 19 24.5 36.4 23.6l-.1-.1z"/></svg>
+    </a>
+  </div>
+
+  <div style="text-align: center;"><img src="https://i.imgur.com/H4JFuyI.png" alt="News Cover Image" style="max-width: 100%; height: auto; border-radius: 12px; margin-bottom: 1.5em;"></div>
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="zh">中文</button><button class="lang-btn " data-lang="en">English</button><button class="lang-btn " data-lang="jp">日本語</button>
+  </div>
+  
+  <div class="ads-block" style="margin: 2.5em 0; position: relative; text-align: center;">
+    <a href="https://cancerfree.io/" target="_blank" style="display: inline-block; position: relative;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI9CDgh7JwzUGH4QTfT5Su2MGI3gUURdf3Tw&s" alt="Advertisement" style="width: 100%; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <div style="
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: 0.75rem;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      ">
+        廣告
+      </div>
+    </a>
+  </div>
+  
+  <div class="lang-content" data-lang="zh" style="">Okay, here's a breakdown of the provided text, extracting the requested information and organizing it for clarity.  I'm focusing on the citations and data availability.
+
+**Citation List (from the provided text)**
+
+Here's a list of the cited works, extracted in the order they appear in the text.  I'm including the full citation as given, and noting if a PubMed ID is available.
+
+1.  **DSM5 handbook of differential diagnosis.** Michael B. American Psychiatric Publishing, Inc. 1988.
+2.  **Depression screening and diagnosis.** Maurer D, Raymond T, Davis B. *Am Fam Phys.* 2018;98:508-515. (PubMed ID: 30277728)
+3.  **An empirical study of emoji usage on Twitter in linguistic and national contexts.** Kejriwal M, et al. *Online Soc Netw Media.* 2021;24:100149.
+4.  **Sentiment classification method based on blending of emoticons and short texts.** Zou H, Xiang K. *Entropy*. 2022;24:398. (PubMed ID: 35327909)
+5.  **Explainable AI a review of machine learning interpretability methods.** Linardatos P, Papastefanopoulos V, Kotsiantis S. *Entropy*. 2020;23:18. (PubMed ID: 33375658)
+
+**Data Availability Statement**
+
+The provided text includes the following data availability statement:
+
+"The datasets generated and analyzed during the current study are not publicly available due to patient privacy and ethical restrictions but are available from the corresponding author on reasonable request."
+
+**Additional Notes**
+
+*   **"et al."**:  In several citations, "et al." is used. This indicates that there are additional authors beyond those listed.
+*   **PubMed IDs:** I'm including PubMed IDs where they were provided in the original text. These IDs can be used to easily locate the full articles in the PubMed database.
+*   **Associated Data:** The text mentions "Supplementary Material 1" but does not provide its content.</div><div class="lang-content" data-lang="en" style="display: none;">Okay, here's a breakdown of the provided text, extracting the requested information.  I'm organizing it into categories for clarity.
+
+**1. Citations (References)**
+
+Here's a list of the cited works, extracted from the text.  I'm including the full citation as it appears in the text.
+
+1.  SalasZrate R, AlorHernndez G, SalasZrate MDP, ParedesValverde MA, BustosLpez M, SnchezCervantes JL. Detecting depression signs on social media a systematic literature review. Healthcare . 202210291. DOI httpsdoi.org10.3390healthcare10020291 PMC free article articlesPMC8871802 PubMed httpspubmed.ncbi.nlm.nih.gov35206905 Google Scholar httpsscholar.google.comscholar_lookupSalasZC3A1rate20R,20AlorHernC3A1ndez20G,20SalasZC3A1rate20MDP,20ParedesValverde20MA,20BustosLC3B3pez20M,20SC3A1nchezCervantes20JL.20Detecting20depression20signs20on20social20media20a20systematic20literature20review.20Healthcare20.20202210291.
+2.  Burdisso S, Errecalde M, MontesYGomez M. A text classification framework for simple and effective early depression detection over social media streams. Expert Syst Appl. 201913318297. Google Scholar httpsscholar.google.comscholar_lookupBurdisso20S,20Errecalde20M,20MontesYGomez20M.20A20text20classification20framework20for20simple20and20effective20early20depression20detection20over20social20media20streams.20Expert20Syst20Appl.20201913318297.
+3.  Kadeethum T, OMalley D, Choi Y, Viswanathan HS, Yoon H. Progressive transfer learning for advancing machine learningbased reducedorder modeling. Sci Rep. 20241415731. DOI httpsdoi.org10.1038s4159802464778y PMC free article articlesPMC11231231 PubMed httpspubmed.ncbi.nlm.nih.gov38977759 Google Scholar httpsscholar.google.comscholar_lookupKadeethum20T,20OE28099Malley20D,20Choi20Y,20Viswanathan20HS,20Yoon20H.20Progressive20transfer20learning20for20advancing20machine20learningbased20reducedorder20modeling.20Sci20Rep.2020241415731.
+4.  Chiong R, Budhi G, Dhakal S. A textualbased featuring approach for depression detection using machine learning classifiers and social media texts. Comput Biol Med. 2021135 104499. DOI httpsdoi.org10.1016j.compbiomed.2021.104499 PubMed httpspubmed.ncbi.nlm.nih.gov34174760 Google Scholar httpsscholar.google.comscholar_lookupChiong20R,20Budhi20G,20Dhakal20S.20A20textualbased20featuring20approach20for20depression20detection20using20machine20learning20classifiers20and20social20media20texts.20Comput20Biol20Med.20202113520104499.
+5.  Liang H, et al. Text feature extraction based on deep learning a review. EURASIP J Wirel Commun Netw. 2017. 10.1186s1363801709931 PMC free article articlesPMC5732309 PubMed httpspubmed.ncbi.nlm.nih.gov29263717 Google Scholar httpsscholar.google.comscholar_lookupLiang20H,20et20al.20Text20feature20extraction20based20on20deep20learning20a20review.20EURASIP20J20Wirel20Commun20Netw.202017.2010.1186s1363801709931.
+6.  Maurer D, Raymond T, Davis B. Depression screening and diagnosis. Am Fam Phys. 20189850815. PubMed httpspubmed.ncbi.nlm.nih.gov30277728 Google Scholar httpsscholar.google.comscholar_lookupMaurer20D,20Raymond20T,20Davis20B.20Depression20screening20and20diagnosis.20Am20Fam20Phys.20201898508E2809315.
+7.  Kejriwal M, et al. An empirical study of emoji usage on Twitter in linguistic and national contexts. Online Soc Netw Media. 202124 100149. Google Scholar httpsscholar.google.comscholar_lookupKejriwal20M,20et20al.20An20empirical20study20of20emoji20usage20on20Twitter20in20linguistic20and20national20contexts.20Online20Soc20Netw20Media.2020212420100149.
+8.  Zou H, Xiang K. Sentiment classification method based on blending of emoticons and short texts. Entropy . 202224398. DOI httpsdoi.org10.3390e24030398 PMC free article articlesPMC8965825 PubMed httpspubmed.ncbi.nlm.nih.gov35327909 Google Scholar httpsscholar.google.comscholar_lookupZou20H,20Xiang20K.20Sentiment20classification20method20based20on20blending20of20emoticons20and20short20texts.20Entropy20.20202224398.
+9.  Linardatos P, Papastefanopoulos V, Kotsiantis S. Explainable AI a review of machine learning interpretability methods. Entropy . 20202318. DOI httpsdoi.org10.3390e23010018 PMC free article articlesPMC7824368 PubMed httpspubmed.ncbi.nlm.nih.gov33375658 Google Scholar httpsscholar.google.comscholar_lookupLinardatos20P,20Papastefanopoulos20V,20Kotsiantis20S.20Explainable20AI20a20review20of20machine20learning20interpretability20methods.20Entropy20.2020202318.
+10. Michael B. DSM5 handbook of differential diagnosis. American Psychiatric Publishing, Inc. 1988.
+
+**2. Data Availability Statement**
+
+"The datasets generated and analyzed during the current study are not publicly available due to patient privacy and ethical restrictions but are available from the corresponding author on reasonable request."
+
+**3. Supplementary Material Information**
+
+*   **Supplementary Material 1:** articlesinstance12341355bin12885\_2025\_14650\_MOESM1\_ESM.pdf
+*   URL: [https://pmc.ncbi.nlm.nih.gov/articles/12341355/](https://pmc.ncbi.nlm.nih.gov/articles/12341355/)
+
+Let me know if you're looking for anything else from this text!</div><div class="lang-content" data-lang="jp" style="display: none;">Okay, here's a breakdown of the provided text, extracting the requested information and organizing it for clarity.  I'm focusing on the citations and data availability.
+
+**1. Citations (List of References)**
+
+Here's a list of the references cited in the text, formatted as they appear.  Note that some are incomplete (e.g., missing page numbers or journal details).
+
+1.  SalasZrate R, AlorHernndez G, SalasZrate MDP, ParedesValverde MA, BustosLpez M, SnchezCervantes JL. Detecting depression signs on social media a systematic literature review. Healthcare . 202210291. DOI httpsdoi.org10.3390healthcare10020291 PMC free article articlesPMC8871802 PubMed httpspubmed.ncbi.nlm.nih.gov35206905 Google Scholar httpsscholar.google.comscholar_lookupSalasZC3A1rate20R,20AlorHernC3A1ndez20G,20SalasZC3A1rate20MDP,20ParedesValverde20MA,20BustosLC3B3pez20M,20SC3A1nchezCervantes20JL.20Detecting20depression20signs20on20social20media20a20systematic20literature20review.20Healthcare20.20202210291.
+2.  Burdisso S, Errecalde M, MontesYGomez M. A text classification framework for simple and effective early depression detection over social media streams. Expert Syst Appl. 201913318297. Google Scholar httpsscholar.google.comscholar_lookupBurdisso20S,20Errecalde20M,20MontesYGomez20M.20A20text20classification20framework20for20simple20and20effective20early20depression20detection20over20social20media20streams.20Expert20Syst20Appl.20201913318297.
+3.  Kadeethum T, OMalley D, Choi Y, Viswanathan HS, Yoon H. Progressive transfer learning for advancing machine learningbased reducedorder modeling. Sci Rep. 20241415731. DOI httpsdoi.org10.1038s4159802464778y PMC free article articlesPMC11231231 PubMed httpspubmed.ncbi.nlm.nih.gov38977759 Google Scholar httpsscholar.google.comscholar_lookupKadeethum20T,20OE28099Malley20D,20Choi20Y,20Viswanathan20HS,20Yoon20H.20Progressive20transfer20learning20for20advancing20machine20learningbased20reducedorder20modeling.20Sci20Rep.2020241415731.
+4.  Chiong R, Budhi G, Dhakal S. A textualbased featuring approach for depression detection using machine learning classifiers and social media texts. Comput Biol Med. 2021135 104499. DOI httpsdoi.org10.1016j.compbiomed.2021.104499 PubMed httpspubmed.ncbi.nlm.nih.gov34174760 Google Scholar httpsscholar.google.comscholar_lookupChiong20R,20Budhi20G,20Dhakal20S.20A20textualbased20featuring20approach20for20depression20detection20using20machine20learning20classifiers20and20social20media20texts.20Comput20Biol20Med.20202113520104499.
+5.  Liang H, et al. Text feature extraction based on deep learning a review. EURASIP J Wirel Commun Netw. 2017. 10.1186s1363801709931 PMC free article articlesPMC5732309 PubMed httpspubmed.ncbi.nlm.nih.gov29263717 Google Scholar httpsscholar.google.comscholar_lookupLiang20H,20et20al.20Text20feature20extraction20based20on20deep20learning20a20review.20EURASIP20J20Wirel20Commun20Netw.202017.2010.1186s1363801709931.
+6.  Maurer D, Raymond T, Davis B. Depression screening and diagnosis. Am Fam Phys. 20189850815. PubMed httpspubmed.ncbi.nlm.nih.gov30277728 Google Scholar httpsscholar.google.comscholar_lookupMaurer20D,20Raymond20T,20Davis20B.20Depression20screening20and20diagnosis.20Am20Fam20Phys.20201898508E2809315.
+7.  Kejriwal M, et al. An empirical study of emoji usage on Twitter in linguistic and national contexts. Online Soc Netw Media. 202124 100149. Google Scholar httpsscholar.google.comscholar_lookupKejriwal20M,20et20al.20An20empirical20study20of20emoji20usage20on20Twitter20in20linguistic20and20national20contexts.20Online20Soc20Netw20Media.2020212420100149.
+8.  Zou H, Xiang K. Sentiment classification method based on blending of emoticons and short texts. Entropy . 202224398. DOI httpsdoi.org10.3390e24030398 PMC free article articlesPMC8965825 PubMed httpspubmed.ncbi.nlm.nih.gov35327909 Google Scholar httpsscholar.google.comscholar_lookupZou20H,20Xiang20K.20Sentiment20classification20method20based20on20blending20of20emoticons20and20short20texts.20Entropy20.20202224398.
+9.  Linardatos P, Papastefanopoulos V, Kotsiantis S. Explainable AI a review of machine learning interpretability methods. Entropy . 20202318. DOI httpsdoi.org10.3390e23010018 PMC free article articlesPMC7824368 PubMed httpspubmed.ncbi.nlm.nih.gov33375658 Google Scholar httpsscholar.google.comscholar_lookupLinardatos20P,20Papastefanopoulos20V,20Kotsiantis20S.20Explainable20AI20a20review20of20machine20learning20interpretability20methods.20Entropy20.2020202318.
+10. Michael B. DSM5 handbook of differential diagnosis. American Psychiatric Publishing, Inc. 1988.
+
+**2. Data Availability Statement**
+
+The text explicitly states:
+
+"The datasets generated and analyzed during the current study are not publicly available due to patient privacy and ethical restrictions but are available from the corresponding author on reasonable request."
+
+Let me know if you'd like me to reformat this information or extract anything else!</div>
+  <p style="text-align:center; margin-top: 2em;">
+    <a href="./construction-of-a-transfer-learningbased-depression-detection-model-for-femalebreast-cancer-patients-text-sentiment-analysis-pmc-seo.html">👉 查看原文 / Full Article</a>
+  </p>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(div => {
+          div.style.display = div.dataset.lang === lang ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
