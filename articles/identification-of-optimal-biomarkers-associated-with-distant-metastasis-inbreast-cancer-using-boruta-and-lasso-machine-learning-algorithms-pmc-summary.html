@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identification of optimal biomarkers associated with distant metastasis inbreast cancer using Boruta and Lasso machine learning algorithms - PMC</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", "Noto Sans TC", sans-serif;
+      max-width: 720px;
+      margin: 2em auto;
+      padding: 0 1em;
+      color: #333;
+      line-height: 1.8;
+      background: #fff;
+    }
+    h1, h2, h3 {
+      text-align: center;
+      color: #222;
+    }
+    .lang-switcher {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .lang-btn {
+      margin: 0 0.5em;
+      padding: 0.4em 1em;
+      border: none;
+      background-color: #eee;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .lang-btn.active {
+      background-color: #007acc;
+      color: white;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .share-block {
+      text-align: center;
+      margin: 1em 0 2em;
+      font-size: 0.95em;
+    }
+    .share-block a svg {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0.4em;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+    .share-block a svg:hover {
+      transform: scale(1.2);
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Identification of optimal biomarkers associated with distant metastasis inbreast cancer using Boruta and Lasso machine learning algorithms - PMC</h1>
+  
+  <div class="share-block">
+    <span>🔗 分享這篇摘要：</span>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Farticles%2Fidentification-of-optimal-biomarkers-associated-with-distant-metastasis-inbreast-cancer-using-boruta-and-lasso-machine-learning-algorithms-pmc-summary.html" target="_blank" title="Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+    </a>
+    <a href="https://x.com/intent/tweet?url=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Farticles%2Fidentification-of-optimal-biomarkers-associated-with-distant-metastasis-inbreast-cancer-using-boruta-and-lasso-machine-learning-algorithms-pmc-summary.html&text=Identification%20of%20optimal%20biomarkers%20associated%20with%20distant%20metastasis%20inbreast%20cancer%20using%20Boruta%20and%20Lasso%20machine%20learning%20algorithms%20-%20PMC" target="_blank" title="X">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+<path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path></svg>
+    </a>
+    <a href="https://www.threads.net/intent/post?url=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Farticles%2Fidentification-of-optimal-biomarkers-associated-with-distant-metastasis-inbreast-cancer-using-boruta-and-lasso-machine-learning-algorithms-pmc-summary.html&text=Identification%20of%20optimal%20biomarkers%20associated%20with%20distant%20metastasis%20inbreast%20cancer%20using%20Boruta%20and%20Lasso%20machine%20learning%20algorithms%20-%20PMC" target="_blank" title="Threads">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM294.2 244.3c19.5 9.3 33.7 23.5 41.2 40.9c10.4 24.3 11.4 63.9-20.2 95.4c-24.2 24.1-53.5 35-95.1 35.3h-.2c-46.8-.3-82.8-16.1-106.9-46.8C91.5 341.8 80.4 303.7 80 256v-.1-.1c.4-47.7 11.5-85.7 33-113.1c24.2-30.7 60.2-46.5 106.9-46.8h.2c46.9 .3 83.3 16 108.2 46.6c12.3 15.1 21.3 33.3 27 54.4l-26.9 7.2c-4.7-17.2-11.9-31.9-21.4-43.6c-19.4-23.9-48.7-36.1-87-36.4c-38 .3-66.8 12.5-85.5 36.2c-17.5 22.3-26.6 54.4-26.9 95.5c.3 41.1 9.4 73.3 26.9 95.5c18.7 23.8 47.4 36 85.5 36.2c34.3-.3 56.9-8.4 75.8-27.3c21.5-21.5 21.1-47.9 14.2-64c-4-9.4-11.4-17.3-21.3-23.3c-2.4 18-7.9 32.2-16.5 43.2c-11.4 14.5-27.7 22.4-48.4 23.5c-15.7 .9-30.8-2.9-42.6-10.7c-13.9-9.2-22-23.2-22.9-39.5c-1.7-32.2 23.8-55.3 63.5-57.6c14.1-.8 27.3-.2 39.5 1.9c-1.6-9.9-4.9-17.7-9.8-23.4c-6.7-7.8-17.1-11.8-30.8-11.9h-.4c-11 0-26 3.1-35.6 17.6l-23-15.8c12.8-19.4 33.6-30.1 58.5-30.1h.6c41.8 .3 66.6 26.3 69.1 71.8c1.4 .6 2.8 1.2 4.2 1.9l.1 .5zm-71.8 67.5c17-.9 36.4-7.6 39.7-48.8c-8.8-1.9-18.6-2.9-29-2.9c-3.2 0-6.4 .1-9.6 .3c-28.6 1.6-38.1 15.5-37.4 27.9c.9 16.7 19 24.5 36.4 23.6l-.1-.1z"/></svg>
+    </a>
+  </div>
+
+  <div style="text-align: center;"><img src="https://i.imgur.com/H4JFuyI.png" alt="News Cover Image" style="max-width: 100%; height: auto; border-radius: 12px; margin-bottom: 1.5em;"></div>
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="zh">中文</button><button class="lang-btn " data-lang="en">English</button><button class="lang-btn " data-lang="jp">日本語</button>
+  </div>
+  
+  <div class="ads-block" style="margin: 2.5em 0; position: relative; text-align: center;">
+    <a href="https://cancerfree.io/" target="_blank" style="display: inline-block; position: relative;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI9CDgh7JwzUGH4QTfT5Su2MGI3gUURdf3Tw&s" alt="Advertisement" style="width: 100%; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <div style="
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: 0.75rem;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      ">
+        廣告
+      </div>
+    </a>
+  </div>
+  
+  <div class="lang-content" data-lang="zh" style="">Okay, I'm ready to process the provided text. Here's a breakdown of the information extracted from the provided text, organized for clarity.  I'm focusing on the key findings and data points related to the research and its findings.
+
+**Overall Summary:**
+
+The text is a collection of references and findings from various research papers, primarily focusing on the prognostic value of inflammatory markers and nutritional status (specifically albumin and globulin ratios) in different types of cancer.  It highlights how these markers can predict survival and outcomes for patients.
+
+**Key Findings & Data Points (Organized by Cancer Type/Condition):**
+
+*   **Breast Cancer:**
+    *   Overweight and obesity are associated with *better* overall survival rates in patients with distant metastases. (Tsang et al., 2016)
+    *   Body Mass Index (BMI) impacts overall survival in metastatic breast cancer. (Saleh et al., 2020)
+*   **Colorectal Cancer:**
+    *   The Advanced Lung Cancer Inflammation Index (ALCI) predicts short- and long-term outcomes after surgical resection. (Xie et al., 2020)
+    *   Monocyte-to-lymphocyte ratio (MLR) is a prognostic factor. (Jakubowska et al., 2020)
+*   **Renal Cell Carcinoma (Clear Cell):**
+    *   Low albumin-to-globulin ratio predicts poorer survival. (Koparal et al., 2018)
+*   **Gastric Cancer:**
+    *   Low albumin-to-globulin ratio predicts poorer prognosis. (Wei et al., 2021)
+*   **General/Across Cancer Types:**
+    *   Albumin-to-globulin ratio is a valuable prognostic marker.
+    *   Inflammatory markers (like MLR and ALCI) are important predictors of outcomes.
+    *   Nutritional status (albumin levels) is linked to survival.
+
+**Important Notes from the Text:**
+
+*   **Data Availability:** All datasets used in the referenced studies are included in the original articles.
+*   **Contact for Collaboration:** Researchers interested in collaboration or data inquiries should contact the corresponding author of the original studies.
+
+**References (as listed in the text):**
+
+1.  Tsang NM, et al. (2016). *Cancer Med.*
+2.  Saleh K, et al. (2020). *Breast.*
+3.  Xie H, et al. (2020). *PeerJ.*
+4.  Jakubowska K, et al. (2020). *World J Gastroenterol.*
+5.  Koparal MY, et al. (2018). *Int Braz J Urol.*
+6.  Wei C, et al. (2021). *Front Oncol.*
+
+Let me know if you'd like me to elaborate on any of these points or extract other information from the text.</div><div class="lang-content" data-lang="en" style="display: none;">Okay, here's a breakdown of the provided text, extracting the requested information and organizing it for clarity.
+
+**Overall Summary:**
+
+This text is a list of references (citations) related to a research article. The article appears to be investigating the relationship between nutritional markers (albumin, globulin, lymphocyte ratios, etc.) and cancer prognosis.  The references demonstrate how these markers are being used as prognostic tools in various cancers (colorectal, gastric, renal cell, breast, lung, and others).  The text also includes a data availability statement and a link to supplementary material.
+
+**Detailed Breakdown of References (with key takeaways):**
+
+Here's a summary of each reference, focusing on the cancer type and the nutritional marker(s) being investigated.  I'm presenting them in the order they appear in the provided text.
+
+1.  **Jakubowska et al. (2020):**
+    *   **Cancer Type:** Colorectal Cancer
+    *   **Marker:** Monocyte-to-lymphocyte ratio (MLR) - found to be a prognostic factor.
+
+2.  **Koparal et al. (2018):**
+    *   **Cancer Type:** Clear Cell Renal Cell Carcinoma
+    *   **Marker:** Albumin-to-globulin ratio - found to be a prognostic factor.
+
+3.  **Wei et al. (2020):**
+    *   **Cancer Type:** Gastric Cancer
+    *   **Marker:** Albumin-to-globulin ratio - low ratio predicts poor prognosis (meta-analysis).
+
+4.  **Tsang et al. (2016):**
+    *   **Cancer Type:** Cancer with Distant Metastases (general)
+    *   **Marker:** Body Mass Index (BMI) - overweight/obesity associated with better survival.
+
+5.  **Saleh et al. (2020):**
+    *   **Cancer Type:** Metastatic Breast Cancer
+    *   **Marker:** Body Mass Index (BMI) - impact on overall survival.
+
+6.  **Xie et al. (2020):**
+    *   **Cancer Type:** Colorectal Cancer
+    *   **Marker:** Advanced Lung Cancer Inflammation Index (ALCI) - predicts outcomes after surgical resection.
+
+7.  **Jakubowska et al. (2020):** (Repeated - likely an error in the original text)
+    *   **Cancer Type:** Colorectal Cancer
+    *   **Marker:** Monocyte-to-lymphocyte ratio (MLR) - found to be a prognostic factor.
+
+8.  **Wei et al. (2020):** (Repeated - likely an error in the original text)
+    *   **Cancer Type:** Gastric Cancer
+    *   **Marker:** Albumin-to-globulin ratio - low ratio predicts poor prognosis (meta-analysis).
+
+**Additional Information:**
+
+*   **Data Availability:** All datasets used in the study are included in the article itself.
+*   **Supplementary Material:** A link is provided to supplementary material (ESM.docx).
+*   **Note:** References 7 and 8 are duplicates, suggesting a potential error in the original text.
+
+Let me know if you'd like me to elaborate on any of these references or provide additional information!</div><div class="lang-content" data-lang="jp" style="display: none;">Okay, here's a breakdown of the provided text, extracting the key information and organizing it for clarity.  I'm focusing on the citations and data-related information, as that seems to be the core request.
+
+**Overall Context:**
+
+The text is a section from a scientific article (likely a review or meta-analysis) discussing the prognostic value of various biomarkers (albumin/globulin ratio, lymphocyte ratios, body mass index, etc.) in different cancers.  It appears to be summarizing findings from other studies.
+
+**1. Citations & Summarized Findings (Organized by Biomarker/Factor):**
+
+Here's a list of the cited studies, along with a brief summary of their findings as described in the text.  I'm including the citation number for easy reference.
+
+*   **1. Monocyte to Lymphocyte Ratio (MLR) in Colorectal Cancer:** Jakubowska et al. (2020) found that a higher MLR is a negative prognostic factor in colorectal cancer patients.
+*   **2. Albumin to Globulin Ratio (A/G) in Clear Cell Renal Cell Carcinoma:** Koparal et al. (2018) found that a lower preoperative A/G ratio predicts poorer survival in clear cell renal cell carcinoma.
+*   **3. Albumin to Globulin Ratio (A/G) in Gastric Cancer:** Wei et al. (2020) found that a lower A/G ratio predicts poorer prognosis in gastric cancer (based on a meta-analysis).
+*   **4. Body Mass Index (BMI) in Cancer Patients with Distant Metastases:** Tsang et al. (2016) found that overweight and obesity are associated with better overall survival rates in cancer patients with distant metastases.
+*   **5. Body Mass Index (BMI) in Metastatic Breast Cancer:** Saleh et al. (2020) found that body mass index impacts overall survival in patients with metastatic breast cancer.
+*   **6. Advanced Lung Cancer Inflammation Index (ALCII) in Colorectal Cancer:** Xie et al. (2020) found that the ALCII predicts short and long-term outcomes in colorectal cancer patients following surgical resection.
+*   **7. Monocyte to Lymphocyte Ratio (MLR) in Peripheral Whole Blood Samples of Colorectal Cancer Patients:** Jakubowska et al. (2020) found that a higher MLR is a negative prognostic factor in colorectal cancer patients.
+
+**2. Data Availability Statement:**
+
+*   **Data Location:** All datasets generated for this study are included in the article.
+*   **Contact for Collaboration:** For collaboration proposals or data-related inquiries, the corresponding author may be contacted directly.
+
+**3. Supplementary Material:**
+
+*   **File Name:** `articlesinstance12345036bin12885_2025_14664_MOESM1_ESM.docx` (This is a supplementary document, likely containing more detailed data or analyses.)
+
+**4. News URL:**
+
+*   `https://pmc.ncbi.nlm.nih.gov/articles/12345036/` (This is a URL to the article on PubMed Central.)
+
+**Key Takeaways:**
+
+*   The article is synthesizing findings from multiple studies to assess the prognostic value of various biomarkers in different cancers.
+*   The findings suggest that lower albumin/globulin ratios and higher lymphocyte ratios are generally associated with poorer prognosis, while higher BMI can sometimes be associated with better outcomes.
+*   The data used in the analysis is included within the article itself.
+*   Supplementary material is available for those needing more detailed information.</div>
+  <p style="text-align:center; margin-top: 2em;">
+    <a href="./identification-of-optimal-biomarkers-associated-with-distant-metastasis-inbreast-cancer-using-boruta-and-lasso-machine-learning-algorithms-pmc-seo.html">👉 查看原文 / Full Article</a>
+  </p>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(div => {
+          div.style.display = div.dataset.lang === lang ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
