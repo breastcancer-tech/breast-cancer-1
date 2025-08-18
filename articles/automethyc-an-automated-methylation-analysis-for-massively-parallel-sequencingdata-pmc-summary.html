@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMethyc: an automated methylation analysis for massively parallel sequencingdata - PMC</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", "Noto Sans TC", sans-serif;
+      max-width: 720px;
+      margin: 2em auto;
+      padding: 0 1em;
+      color: #333;
+      line-height: 1.8;
+      background: #fff;
+    }
+    h1, h2, h3 {
+      text-align: center;
+      color: #222;
+    }
+    .lang-switcher {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .lang-btn {
+      margin: 0 0.5em;
+      padding: 0.4em 1em;
+      border: none;
+      background-color: #eee;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .lang-btn.active {
+      background-color: #007acc;
+      color: white;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .share-block {
+      text-align: center;
+      margin: 1em 0 2em;
+      font-size: 0.95em;
+    }
+    .share-block a svg {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0.4em;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+    .share-block a svg:hover {
+      transform: scale(1.2);
+    }
+  </style>
+
+</head>
+<body>
+  <h1>AutoMethyc: an automated methylation analysis for massively parallel sequencingdata - PMC</h1>
+  
+  <div class="share-block">
+    <span>🔗 分享這篇摘要：</span>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Farticles%2Fautomethyc-an-automated-methylation-analysis-for-massively-parallel-sequencingdata-pmc-summary.html" target="_blank" title="Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+    </a>
+    <a href="https://x.com/intent/tweet?url=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Farticles%2Fautomethyc-an-automated-methylation-analysis-for-massively-parallel-sequencingdata-pmc-summary.html&text=AutoMethyc%3A%20an%20automated%20methylation%20analysis%20for%20massively%20parallel%20sequencingdata%20-%20PMC" target="_blank" title="X">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+<path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path></svg>
+    </a>
+    <a href="https://www.threads.net/intent/post?url=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Farticles%2Fautomethyc-an-automated-methylation-analysis-for-massively-parallel-sequencingdata-pmc-summary.html&text=AutoMethyc%3A%20an%20automated%20methylation%20analysis%20for%20massively%20parallel%20sequencingdata%20-%20PMC" target="_blank" title="Threads">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM294.2 244.3c19.5 9.3 33.7 23.5 41.2 40.9c10.4 24.3 11.4 63.9-20.2 95.4c-24.2 24.1-53.5 35-95.1 35.3h-.2c-46.8-.3-82.8-16.1-106.9-46.8C91.5 341.8 80.4 303.7 80 256v-.1-.1c.4-47.7 11.5-85.7 33-113.1c24.2-30.7 60.2-46.5 106.9-46.8h.2c46.9 .3 83.3 16 108.2 46.6c12.3 15.1 21.3 33.3 27 54.4l-26.9 7.2c-4.7-17.2-11.9-31.9-21.4-43.6c-19.4-23.9-48.7-36.1-87-36.4c-38 .3-66.8 12.5-85.5 36.2c-17.5 22.3-26.6 54.4-26.9 95.5c.3 41.1 9.4 73.3 26.9 95.5c18.7 23.8 47.4 36 85.5 36.2c34.3-.3 56.9-8.4 75.8-27.3c21.5-21.5 21.1-47.9 14.2-64c-4-9.4-11.4-17.3-21.3-23.3c-2.4 18-7.9 32.2-16.5 43.2c-11.4 14.5-27.7 22.4-48.4 23.5c-15.7 .9-30.8-2.9-42.6-10.7c-13.9-9.2-22-23.2-22.9-39.5c-1.7-32.2 23.8-55.3 63.5-57.6c14.1-.8 27.3-.2 39.5 1.9c-1.6-9.9-4.9-17.7-9.8-23.4c-6.7-7.8-17.1-11.8-30.8-11.9h-.4c-11 0-26 3.1-35.6 17.6l-23-15.8c12.8-19.4 33.6-30.1 58.5-30.1h.6c41.8 .3 66.6 26.3 69.1 71.8c1.4 .6 2.8 1.2 4.2 1.9l.1 .5zm-71.8 67.5c17-.9 36.4-7.6 39.7-48.8c-8.8-1.9-18.6-2.9-29-2.9c-3.2 0-6.4 .1-9.6 .3c-28.6 1.6-38.1 15.5-37.4 27.9c.9 16.7 19 24.5 36.4 23.6l-.1-.1z"/></svg>
+    </a>
+  </div>
+
+  <div style="text-align: center;"><img src="https://i.imgur.com/H4JFuyI.png" alt="News Cover Image" style="max-width: 100%; height: auto; border-radius: 12px; margin-bottom: 1.5em;"></div>
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="zh">中文</button><button class="lang-btn " data-lang="en">English</button><button class="lang-btn " data-lang="jp">日本語</button>
+  </div>
+  
+  <div class="ads-block" style="margin: 2.5em 0; position: relative; text-align: center;">
+    <a href="https://cancerfree.io/" target="_blank" style="display: inline-block; position: relative;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI9CDgh7JwzUGH4QTfT5Su2MGI3gUURdf3Tw&s" alt="Advertisement" style="width: 100%; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <div style="
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: 0.75rem;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      ">
+        廣告
+      </div>
+    </a>
+  </div>
+  
+  <div class="lang-content" data-lang="zh" style="">Okay, here's a breakdown of the provided text, extracting the key information about DNA methylation analysis tools. I'm organizing it into categories for clarity.
+
+**1. Overview**
+
+The text is a section from a research article (likely a review or comparison) focused on DNA methylation analysis tools. It appears to be a comprehensive list of tools available for analyzing DNA methylation data, ranging from older, established methods to newer, cutting-edge approaches, including deep learning.
+
+**2. Tools Listed (with brief descriptions)**
+
+Here's a categorized list of the tools mentioned, along with a short description based on the text.  I'm grouping them roughly by complexity/approach.
+
+**A. Established/Core Tools (Often used as foundational steps)**
+
+*   **BiQ Analyzer:** (Bock et al., 32) - Visualization and quality control for DNA methylation data from bisulfite sequencing.
+*   **Msuite2:** (Li et al., 34) - An all-in-one DNA methylation data analysis toolkit with enhanced usability and performance.
+*   **DNA Methylation Data Format and DMtools:** (Qiangwei et al., 35) - For efficient DNA methylation data storage and analysis.
+
+**B. Single-Cell Focused Tools**
+
+*   **Biscuit:** (Zhou et al., 29) - An efficient, standards-compliant tool suite for simultaneous genetic and epigenetic inference in bulk and single-cell studies.
+*   **Methylstar:** (Shahryary et al., 31) - A fast and robust preprocessing pipeline for bulk or single-cell whole-genome bisulfite sequencing data.
+*   **nfcoremethylseq:** (Ewels et al., 33) - (No description provided, likely a core component of a larger pipeline)
+*   **Methylnet:** (Levy et al., 36) - An automated and modular deep learning approach for DNA methylation analysis.
+
+**C.  General Analysis/Pipeline Tools**
+
+*   **AutoMethyc:** (The focus of the article, source code available at https://github.com/UBIMEDLab/AutoMethyc) -  (No description provided beyond its availability)
+*   **Methylnet:** (Levy et al., 36) - An automated and modular deep learning approach for DNA methylation analysis.
+
+**3. Data Availability**
+
+*   The source code for **AutoMethyc** is available at: [https://github.com/UBIMEDLab/AutoMethyc](https://github.com/UBIMEDLab/AutoMethyc)
+
+**4. Supplementary Materials**
+
+The article includes the following supplementary materials:
+
+*   Comparative Benchmarking of DNA Methylation Analysis Tools (PDF)
+*   HTML output file (PDF)
+*   AutoMethyc Documentation (PDF)
+
+**5. Key Takeaways**
+
+*   The field of DNA methylation analysis has a wide range of tools, from established methods to newer deep learning approaches.
+*   The article likely provides a comparative analysis of these tools (as suggested by the supplementary material).
+*   AutoMethyc is a key focus of the article, and its source code is publicly available.
+*   The tools are increasingly specialized, with some designed specifically for single-cell analysis.
+
+Let me know if you'd like me to elaborate on any specific tool or aspect of this information!</div><div class="lang-content" data-lang="en" style="display: none;">Okay, here's a breakdown of the provided text, extracting the requested information.  I'm focusing on the tools mentioned for DNA methylation analysis.
+
+**DNA Methylation Analysis Tools Mentioned (with brief descriptions):**
+
+*   **BiQ Analyzer:** Visualization and quality control for DNA methylation data from bisulfite sequencing. (Bock et al., 2005)
+*   **Msuite2:** All-in-one DNA methylation data analysis toolkit with enhanced usability and performance. (Li et al., 2022)
+*   **Methylnet:** Automated and modular deep learning approach for DNA methylation analysis. (Levy et al., 2020)
+*   **Biscuit:** Efficient, standards-compliant tool suite for simultaneous genetic and epigenetic inference in bulk and single-cell studies. (Zhou et al., 2024)
+*   **Shahryary et al. (Methylstar):** Fast and robust preprocessing pipeline for bulk or single-cell wholegenome bisulfite sequencing data. (Shahryary et al., 2020)
+*   **Liu et al. (DNA Methylation Atlas):**  While not a tool *per se*, this is a significant dataset created using sequencing methods. (Liu et al., 2021)
+*   **Qiangwei et al. (DNA Methylation Data Format and DMtools):**  Focuses on data storage and analysis. (Qiangwei et al., 2023)
+*   **Ewels et al. (nfcoremethylseq Endless tofu):** (Ewels et al., 2024)
+*   **AutoMethyc:**  A new tool, source code available at [https://github.com/UBIMEDLab/AutoMethyc](https://github.com/UBIMEDLab/AutoMethyc)
+
+**Additional Notes from the Text:**
+
+*   The text includes a "Comparative Benchmarking of DNA Methylation Analysis Tools" as supplementary material.
+*   The text mentions a HTML output file as supplementary material.
+*   AutoMethyc documentation is also provided as supplementary material.
+
+
+
+Let me know if you'd like me to elaborate on any of these tools or provide more details!</div><div class="lang-content" data-lang="jp" style="display: none;">Okay, here's a breakdown of the provided text, extracting the key information about DNA methylation analysis tools. I'm organizing it into categories:
+
+**1. Overview & Purpose of the Text**
+
+*   **Context:** This is likely an excerpt from a research article or review paper focusing on DNA methylation analysis tools. It appears to be a comparative benchmarking study.
+*   **Focus:** The text aims to provide an overview and comparison of various software and pipelines used to analyze DNA methylation data, particularly from bisulfite sequencing.
+
+**2. Tools & Pipelines Mentioned (with brief descriptions)**
+
+Here's a categorized list of the tools, grouped by general type (core analysis, visualization, deep learning, etc.) and with a short description based on the text.  *Note: The level of detail varies depending on how much information the text provides.*
+
+**A. Core Methylation Analysis & Preprocessing**
+
+*   **Biscuit:** An efficient tool suite for genetic and epigenetic inference (bulk and single-cell).
+*   **Methylstar:** A fast and robust preprocessing pipeline for bulk or single-cell whole-genome bisulfite sequencing data.
+*   **BiQ Analyzer:**  A tool for visualization and quality control of DNA methylation data from bisulfite sequencing.
+*   **Msuite2:** An all-in-one DNA methylation data analysis toolkit with enhanced usability and performance.
+*   **DMtools:**  A suite for efficient DNA methylation data storage and analysis.
+
+**B. Visualization & Quality Control**
+
+*   **BiQ Analyzer:** (Also listed above, highlighting its visualization capabilities)
+
+**C. Deep Learning Approaches**
+
+*   **Methylnet:** An automated and modular deep learning approach for DNA methylation analysis.
+
+**D. Single-Cell Analysis**
+
+*   **Biscuit:** (Specifically mentioned for single-cell analysis)
+*   **Methylstar:** (Also mentioned for single-cell analysis)
+*   **Kreimer:** (Mentioned in the supplementary material)
+
+**E.  Other/Custom Tools**
+
+*   **AutoMethyc:** A custom tool (developed by UBIMEDLab) – source code available at [https://github.com/UBIMEDLab/AutoMethyc](https://github.com/UBIMEDLab/AutoMethyc)
+*   **nfcoremethylseq:** (Mentioned in supplementary material)
+
+**3. Data Availability**
+
+*   **AutoMethyc Source Code:**  [https://github.com/UBIMEDLab/AutoMethyc](https://github.com/UBIMEDLab/AutoMethyc)
+
+**4. Supplementary Materials**
+
+*   Comparative Benchmarking of DNA Methylation Analysis Tools (PDF)
+*   HTML output file (related to the benchmarking)
+*   AutoMethyc Documentation (PDF)
+*   nfcoremethylseq (PDF)
+
+**Key Takeaways & Potential Research Directions**
+
+*   **Variety of Tools:** The landscape of DNA methylation analysis tools is diverse, ranging from established pipelines to custom-built solutions and deep learning approaches.
+*   **Custom Tool Development:** The development of tools like AutoMethyc suggests ongoing efforts to improve and automate the analysis process.
+*   **Benchmarking is Crucial:** The text implies a comparative benchmarking study is being conducted to evaluate the performance of these tools.
+*   **Single-Cell Analysis is a Focus:** Several tools are specifically designed or adaptable for single-cell DNA methylation analysis.
+
+If you have any specific questions about a particular tool or aspect of the text, feel free to ask!</div>
+  <p style="text-align:center; margin-top: 2em;">
+    <a href="./automethyc-an-automated-methylation-analysis-for-massively-parallel-sequencingdata-pmc-seo.html">👉 查看原文 / Full Article</a>
+  </p>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(div => {
+          div.style.display = div.dataset.lang === lang ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
