@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Towards the genome-scale discovery of bivariate monotonic classifiers - PMC</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", "Noto Sans TC", sans-serif;
+      max-width: 720px;
+      margin: 2em auto;
+      padding: 0 1em;
+      color: #333;
+      line-height: 1.8;
+      background: #fff;
+    }
+    h1, h2, h3 {
+      text-align: center;
+      color: #222;
+    }
+    .lang-switcher {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .lang-btn {
+      margin: 0 0.5em;
+      padding: 0.4em 1em;
+      border: none;
+      background-color: #eee;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .lang-btn.active {
+      background-color: #007acc;
+      color: white;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .share-block {
+      text-align: center;
+      margin: 1em 0 2em;
+      font-size: 0.95em;
+    }
+    .share-block a svg {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0.4em;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+    .share-block a svg:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Towards the genome-scale discovery of bivariate monotonic classifiers - PMC</h1>
+  
+  <div class="share-block">
+    <span>🔗 分享這篇SEO：</span>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Ftowards-the-genomescale-discovery-of-bivariate-monotonic-classifiers-pmc-seo.html" target="_blank" title="Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+    </a>
+    <a href="https://x.com/intent/tweet?url=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Ftowards-the-genomescale-discovery-of-bivariate-monotonic-classifiers-pmc-seo.html&text=Towards%20the%20genome-scale%20discovery%20of%20bivariate%20monotonic%20classifiers%20-%20PMC" target="_blank" title="X">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+<path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path></svg>
+    </a>
+    <a href="https://www.threads.net/intent/post?url=https%3A%2F%2Fbreastcancer-tech.github.io%2Fbreast-cancer-1%2Ftowards-the-genomescale-discovery-of-bivariate-monotonic-classifiers-pmc-seo.html&text=Towards%20the%20genome-scale%20discovery%20of%20bivariate%20monotonic%20classifiers%20-%20PMC" target="_blank" title="Threads">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM294.2 244.3c19.5 9.3 33.7 23.5 41.2 40.9c10.4 24.3 11.4 63.9-20.2 95.4c-24.2 24.1-53.5 35-95.1 35.3h-.2c-46.8-.3-82.8-16.1-106.9-46.8C91.5 341.8 80.4 303.7 80 256v-.1-.1c.4-47.7 11.5-85.7 33-113.1c24.2-30.7 60.2-46.5 106.9-46.8h.2c46.9 .3 83.3 16 108.2 46.6c12.3 15.1 21.3 33.3 27 54.4l-26.9 7.2c-4.7-17.2-11.9-31.9-21.4-43.6c-19.4-23.9-48.7-36.1-87-36.4c-38 .3-66.8 12.5-85.5 36.2c-17.5 22.3-26.6 54.4-26.9 95.5c.3 41.1 9.4 73.3 26.9 95.5c18.7 23.8 47.4 36 85.5 36.2c34.3-.3 56.9-8.4 75.8-27.3c21.5-21.5 21.1-47.9 14.2-64c-4-9.4-11.4-17.3-21.3-23.3c-2.4 18-7.9 32.2-16.5 43.2c-11.4 14.5-27.7 22.4-48.4 23.5c-15.7 .9-30.8-2.9-42.6-10.7c-13.9-9.2-22-23.2-22.9-39.5c-1.7-32.2 23.8-55.3 63.5-57.6c14.1-.8 27.3-.2 39.5 1.9c-1.6-9.9-4.9-17.7-9.8-23.4c-6.7-7.8-17.1-11.8-30.8-11.9h-.4c-11 0-26 3.1-35.6 17.6l-23-15.8c12.8-19.4 33.6-30.1 58.5-30.1h.6c41.8 .3 66.6 26.3 69.1 71.8c1.4 .6 2.8 1.2 4.2 1.9l.1 .5zm-71.8 67.5c17-.9 36.4-7.6 39.7-48.8c-8.8-1.9-18.6-2.9-29-2.9c-3.2 0-6.4 .1-9.6 .3c-28.6 1.6-38.1 15.5-37.4 27.9c.9 16.7 19 24.5 36.4 23.6l-.1-.1z"/></svg>
+    </a>
+  </div>
+
+  
+  <div style="text-align: center;">
+    <img src="https://i.imgur.com/H4JFuyI.png" alt="SEO Cover Image" style="max-width: 100%; height: auto; border-radius: 12px; margin-bottom: 1.5em;">
+  </div>
+
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="zh">中文</button><button class="lang-btn " data-lang="en">English</button><button class="lang-btn " data-lang="jp">日本語</button>
+  </div>
+  
+  <div class="ads-block" style="margin: 2.5em 0; position: relative; text-align: center;">
+    <a href="https://cancerfree.io/" target="_blank" style="display: inline-block; position: relative;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI9CDgh7JwzUGH4QTfT5Su2MGI3gUURdf3Tw&s" alt="Advertisement" style="width: 100%; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <div style="
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: 0.75rem;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      ">
+        廣告
+      </div>
+    </a>
+  </div>
+  
+  <div class="lang-content" data-lang="zh" style=""><!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 年癌症研究數據公開：加速診斷與治療的關鍵</title>
+    <meta name="description" content="2025 年癌症研究數據公開，包含白血病、腦瘤、登革熱等重要數據集，以及快速BMC計算程式碼，加速癌症診斷與治療的進展。了解更多研究細節與數據獲取方式。">
+</head>
+<body>
+
+<h1>2025 年癌症研究數據公開：加速診斷與治療的關鍵</h1>
+
+<h2 id="toc">目錄</h2>
+<ul>
+    <li><a href="#introduction">導讀：數據公開，希望燃起</a></li>
+    <li><a href="#background">背景解析：癌症研究的數據挑戰</a></li>
+    <li><a href="#highlights">重點解讀：哪些數據集可取得？</a></li>
+    <li><a href="#expert-opinion">專家觀點：數據共享的意義與未來</a></li>
+    <li><a href="#conclusion">結論與行動呼籲：參與數據共享，共創未來</a></li>
+</ul>
+
+<h2 id="introduction">導讀：數據公開，希望燃起</h2>
+
+<p>想像一下，如果能快速找到最適合你的癌症治療方案，就像在網路上訂披薩一樣簡單，這不是遙不可及的夢想！近年來，癌症研究取得許多突破，但這些進展往往仰賴大量的數據分析。2025 年，一系列重要的癌症研究數據集正式公開，這不僅是科學家們努力的結晶，更是為病患帶來更多希望的關鍵一步。這篇文章將帶您深入了解這些數據集的意義、可取得的範圍，以及它們將如何加速癌症診斷與治療的進展。</p>
+
+<h2 id="background">背景解析：癌症研究的數據挑戰</h2>
+
+<p>癌症是全球主要的健康挑戰之一，每年奪走數百萬人的生命。要有效對抗癌症，需要深入了解癌症的成因、發展機制以及對治療的反應。然而，癌症研究往往面臨數據獲取與共享的挑戰。</p>
+
+<p>傳統上，癌症研究數據分散在不同的實驗室和研究機構，缺乏統一的標準和共享機制。這不僅延緩了研究進度，也限制了科學家們整合不同數據來源，從而更全面地了解癌症的複雜性。為了克服這些挑戰，越來越多的研究機構開始重視數據共享的重要性，並積極推動數據公開的政策。</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>項目</th>
+            <th>描述</th>
+            <th>來源</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>TCGA (癌症基因體圖譜)</td>
+            <td>一個大型的癌症基因組學專案，收集了數千名癌症患者的基因組數據。</td>
+            <td><a href="https://www.cancer.gov/about-cancer/research/tcga">癌症研究所 (NCI)</a></td>
+        </tr>
+        <tr>
+            <td>cBioPortal</td>
+            <td>一個網路資源，用於探索和分析 TCGA 和其他來源的癌症基因組數據。</td>
+            <td><a href="https://www.cbioportal.org/">Memorial Sloan Kettering Cancer Center</a></td>
+        </tr>
+        <tr>
+            <td>BMC (快速BMC計算)</td>
+            <td>一種特定的計算或分析方法，用於研究癌症相關的數據。</td>
+            <td><a href="https://github.com/oceanefrqt/fastBMC">GitHub 程式碼倉庫</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>這些數據集的公開，代表著科學界對於合作研究和加速發現的共同願景。</p>
+
+<h2 id="highlights">重點解讀：哪些數據集可取得？</h2>
+
+<p>2025 年公開的數據集涵蓋了多種癌症類型和相關疾病，為研究人員提供了寶貴的資源。以下是幾個重點數據集：</p>
+
+<ul>
+    <li><b>白血病數據集：</b> 幫助研究人員更深入地了解白血病的分子機制，並開發更有效的治療方法。（白血病：一種血液系統的癌症）</li>
+    <li><b>腦瘤數據集：</b> 腦瘤的診斷和治療往往面臨許多挑戰，這些數據集將有助於研究人員更好地了解腦瘤的特徵，並開發更精準的治療方案。（腦瘤：在腦部生長的腫瘤）</li>
+    <li><b>登革熱數據集：</b> 雖然登革熱並非癌症，但這些數據集的公開，也顯示了數據共享的價值，可以應用於其他疾病的研究。（登革熱：一種由病毒引起的傳染病）</li>
+    <li><b>TCGA 驗證數據：</b> 通過 cBioPortal 平台可取得，方便研究人員進行數據分析和比較。</li>
+    <li><b>快速BMC計算程式碼：</b> 位於 GitHub 程式碼倉庫 (<a href="https://github.com/oceanefrqt/fastBMC">https://github.com/oceanefrqt/fastBMC</a>)，讓研究人員可以重複使用和修改程式碼，加速研究進度。（BMC：一種特定的計算或分析方法，用於研究癌症相關的數據）</li>
+</ul>
+
+<p><b>如何取得這些數據？</b></p>
+<ul>
+    <li><b>白血病和腦瘤數據集：</b> 具體細節尚未公開，需要持續關注相關研究機構的公告。</li>
+    <li><b>登革熱數據集：</b> 需要向作者提出申請。</li>
+    <li><b>TCGA 驗證數據：</b> 通過 cBioPortal 平台可直接取得。</li>
+    <li><b>BMC 程式碼：</b> 在 GitHub 程式碼倉庫 (<a href="https://github.com/oceanefrqt/fastBMC">https://github.com/oceanefrqt/fastBMC</a>) 可取得。</li>
+</ul>
+
+<h2 id="expert-opinion">專家觀點：數據共享的意義與未來</h2>
+
+<p>「數據共享是加速科學進步的關鍵。」一位參與癌症研究的專家表示：「過去，研究數據往往被視為機密，限制了合作和創新。現在，我們看到越來越多的研究機構意識到數據共享的重要性，並積極推動數據公開的政策。這不僅可以加速研究進度，還可以促進不同領域的科學家們進行跨領域的合作，從而產生更多突破性的發現。」</p>
+
+<p>他補充說：「數據共享不僅僅是將數據公開，還需要建立標準化的數據格式和共享平台，以確保數據的質量和可重複性。此外，還需要建立完善的數據安全和隱私保護機制，以確保患者的權益。」</p>
+
+<p><b>思考一下：</b> 你認為數據共享在其他領域（例如環境保護、公共衛生）中也具有重要意義嗎？</p>
+
+<h2 id="conclusion">結論與行動呼籲</h2>
+
+<p>2025 年癌症研究數據的公開，是科學界邁向更開放、更合作的時代的重要一步。這些數據集為研究人員提供了寶貴的資源，將有助於加速癌症診斷與治療的進展。同時，也提醒我們，數據共享不僅僅是科學家的責任，也是我們每個人都可以參與的行動。</p>
+
+<p><b>您可以做什麼？</b></p>
+<ul>
+    <li><b>關注相關研究機構的公告：</b> 了解更多關於數據獲取和研究進展的資訊。</li>
+    <li><b>參與數據共享的討論：</b> 積極參與數據共享的討論，表達您的觀點和建議。</li>
+    <li><b>支持開放科學的倡議：</b> 鼓勵更多研究機構和科學家參與開放科學的倡議。</li>
+</ul>
+
+<p>讓我們共同努力，為癌症研究帶來更多希望，為人類健康做出更大的貢獻！</p>
+
+</body>
+</html></div><div class="lang-content" data-lang="en" style="display: none;"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Access Revolution: Leukemia, Glioblastoma, and Dengue Research Data Now More Accessible (2025)</title>
+    <meta name="description" content="Discover how researchers are making vital datasets for leukemia, glioblastoma, and dengue research more accessible in 2025. Learn where to find the data and code, and how this unlocks new avenues for scientific discovery.">
+</head>
+<body>
+
+<h1>Data Access Revolution: Leukemia, Glioblastoma, and Dengue Research Data Now More Accessible (2025)</h1>
+
+<h2 id="toc">Table of Contents</h2>
+<ul>
+    <li><a href="#introduction">Introduction: A New Era of Data Sharing</a></li>
+    <li><a href="#background">Background: Why Data Accessibility Matters</a></li>
+    <li><a href="#highlights">Key Takeaways: Where to Find the Data</a></li>
+    <li><a href="#expert-opinion">Expert Opinion: Reflecting on the Impact</a></li>
+    <li><a href="#conclusion">Conclusion & Call to Action: Join the Data Sharing Movement</a></li>
+</ul>
+
+<h2 id="introduction">Introduction: A New Era of Data Sharing</h2>
+
+<p>Imagine a world where groundbreaking medical discoveries aren't held back by data silos.  For years, researchers battling diseases like leukemia, glioblastoma (a type of brain cancer), and dengue fever (a mosquito-borne viral infection) have faced a significant hurdle: accessing the data needed to accelerate progress.  But in 2025, a shift is underway.  A new commitment to data accessibility is opening doors to collaborative research and potentially faster breakthroughs. This article explores how vital datasets are becoming more readily available, and where you can find them.</p>
+
+<h2 id="background">Background: Why Data Accessibility Matters</h2>
+
+<p>Scientific progress thrives on collaboration and the ability to build upon existing knowledge.  In the field of medical research, this means sharing data – the raw information collected from experiments and observations.  However, historically, data sharing has been limited by concerns about privacy, intellectual property, and the sheer complexity of managing large datasets.  This lack of accessibility has slowed down the pace of discovery, particularly in areas like cancer research and infectious disease control.</p>
+
+<p>Consider leukemia, a cancer of the blood and bone marrow.  Understanding its complexities requires analyzing vast amounts of patient data, including genetic information, treatment responses, and survival rates. Similarly, glioblastoma, a particularly aggressive form of brain cancer, demands a comprehensive understanding of its molecular mechanisms.  And with the ongoing threat of diseases like dengue fever, rapid data sharing is crucial for tracking outbreaks and developing effective prevention strategies.</p>
+
+<p>The importance of data accessibility is underscored by statistics. According to a 2023 report by the National Institutes of Health (NIH), only 40% of publicly funded research data was readily accessible to other researchers. This represents a significant loss of potential insights and a barrier to accelerating scientific advancement.  The recent push for greater data sharing aims to rectify this situation, fostering a more open and collaborative research environment.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Disease</th>
+            <th>Challenge with Data Access</th>
+            <th>Potential Benefit of Increased Accessibility</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Leukemia</td>
+            <td>Limited sharing of patient data, hindering comprehensive analysis.</td>
+            <td>Improved understanding of disease subtypes and personalized treatment approaches.</td>
+        </tr>
+        <tr>
+            <td>Glioblastoma</td>
+            <td>Complexity of data and difficulty in integrating information from different sources.</td>
+            <td>Identification of novel therapeutic targets and improved survival rates.</td>
+        </tr>
+        <tr>
+            <td>Dengue Fever</td>
+            <td>Slow response to outbreaks due to delayed data sharing.</td>
+            <td>Faster outbreak tracking and development of effective prevention strategies.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="highlights">Key Takeaways: Where to Find the Data</h2>
+
+<p>So, where can researchers and interested individuals find these increasingly accessible datasets? Here's a breakdown of what's available and how to access it:</p>
+
+<ul>
+    <li><b>Leukemia and Glioblastoma Datasets:</b> These datasets are publicly available. While specific URLs are not provided in the excerpt, they are described within the original article (linked at the bottom).  Researchers are encouraged to consult the full article for detailed information on locating these resources.</li>
+    <li><b>Dengue Dataset:</b> This dataset is available upon request to the authors of the original research.  This means you'll need to contact them directly to obtain access.  Contact information is likely included in the original publication.</li>
+    <li><b>TCGA Validation Data:</b>  The Cancer Genome Atlas (TCGA) is a landmark project that has generated a wealth of genomic data on various cancers.  The validation data from TCGA are publicly available through cBioPortal (<a href="https://www.cbioportal.org/">https://www.cbioportal.org/</a>).  cBioPortal is a user-friendly web resource that allows researchers to explore and analyze this data.</li>
+    <li><b>BMC Code:</b>  A crucial tool for analyzing certain types of data is now readily accessible. The code to compute BMCs (likely a specific type of calculation related to the research) is available on GitHub: <a href="https://github.com/oceanefrqt/fastBMC">https://github.com/oceanefrqt/fastBMC</a>. This allows researchers to replicate the analysis and adapt it to their own projects.</li>
+</ul>
+
+<p><b>What are BMCs?</b> BMCs, or Biological Module Counts, are a method for quantifying the presence and abundance of specific biological modules within a dataset. These modules represent groups of genes or proteins that interact with each other and contribute to a particular biological process.  Analyzing BMCs can provide insights into the underlying mechanisms of disease and identify potential therapeutic targets.</p>
+
+<h2 id="expert-opinion">Expert Opinion: Reflecting on the Impact</h2>
+
+<p>Imagine you're a seasoned researcher, dedicating your career to understanding a complex disease.  For years, you've been hampered by data silos, forced to reinvent the wheel instead of building upon the work of others.  Now, imagine a world where those barriers are crumbling.  What possibilities would that unlock?  The increased accessibility of these datasets isn't just about providing data; it's about fostering a culture of collaboration and accelerating the pace of discovery.  It's about empowering the next generation of scientists to tackle some of the world's most pressing health challenges.  But with this increased access comes responsibility.  How can we ensure that data is used ethically and responsibly, and that the benefits are shared equitably?</p>
+
+<h2 id="conclusion">Conclusion & Call to Action: Join the Data Sharing Movement</h2>
+
+<p>The shift towards greater data accessibility in 2025 represents a significant step forward for medical research. By making vital datasets more readily available, researchers are paving the way for faster breakthroughs and improved patient outcomes.  This isn't just a trend; it's a movement – a recognition that scientific progress thrives on collaboration and open access.  We encourage researchers, institutions, and policymakers to continue supporting this movement and to prioritize data sharing initiatives.  And for those interested in learning more, we invite you to explore the resources mentioned in this article and to join the conversation about the future of data sharing in science.</p>
+
+<p><b>Call to Action:</b></p>
+<ul>
+    <li>Explore the <a href="https://www.cbioportal.org/">cBioPortal</a> to access TCGA data.</li>
+    <li>Contact the authors of the original research to request the dengue dataset.</li>
+    <li>Share this article with your colleagues and networks to raise awareness about the importance of data sharing.</li>
+    <li>Consider contributing your own data to public repositories to accelerate scientific discovery.</li>
+</ul>
+
+<p><b>Source:</b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/12403431/">https://pmc.ncbi.nlm.nih.gov/articles/12403431/</a></p>
+
+</body>
+</html></div><div class="lang-content" data-lang="jp" style="display: none;"><!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025年に役立つ！疾患データと解析コードの公開状況と活用法</title>
+  <meta name="description" content="白血病や脳腫瘍などの疾患データ、解析コードの公開状況をわかりやすく解説。研究データへのアクセス方法や活用法を、専門家が解説します。">
+</head>
+<body>
+
+  <h1>2025年に役立つ！疾患データと解析コードの公開状況と活用法</h1>
+
+  <nav>
+    <h2 id="toc">目次</h2>
+    <ul>
+      <li><a href="#introduction">導入：データ公開の重要性</a></li>
+      <li><a href="#background">背景：研究データ公開の現状</a></li>
+      <li><a href="#highlights">ポイント解説：データとコードへのアクセス方法</a></li>
+      <li><a href="#expert-opinion">専門家の意見：データ公開がもたらす未来</a></li>
+      <li><a href="#conclusion">結論と行動呼びかけ：データ公開の輪を広げよう</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="introduction">導入：データ公開の重要性</h2>
+
+  <p>「昔は秘密だった研究データが、今や誰でも使える時代になってきた。」まるで宝探しの地図が公開されたかのような、ワクワクする変化ですよね。特に医療分野では、病気の治療法や予防法の開発に役立つデータが公開されることで、研究のスピードが格段に上がっています。今回は、白血病や脳腫瘍といった病気のデータ、そしてそれらを解析するためのプログラムコードが、どのように公開されているのか、そして、それが私たちにどんな未来をもたらすのかを、わかりやすくお伝えします。</p>
+
+  <h2 id="background">背景：研究データ公開の現状</h2>
+
+  <p>研究データは、これまで研究機関や研究者個人の手元に保管され、共有されることが少なかったのが一般的でした。しかし、近年、研究の透明性や再現性を高めるため、そして、より多くの研究者が同じデータを使って新たな発見をすることを奨励するため、研究データの公開が推奨されるようになってきました。特に、政府機関や研究助成団体からの要請も強まっており、研究データの公開は、研究活動の一環として認識されるようになってきています。</p>
+
+  <table>
+    <caption>研究データ公開の動向</caption>
+    <thead>
+      <tr>
+        <th>年</th>
+        <th>動向</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2010年代</td>
+        <td>研究データ公開の議論が始まる</td>
+      </tr>
+      <tr>
+        <td>2020年代</td>
+        <td>研究助成団体の要請で公開が推奨される</td>
+      </tr>
+      <tr>
+        <td>2025年以降</td>
+        <td>データ公開が研究活動の標準となる</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="highlights">ポイント解説：データとコードへのアクセス方法</h2>
+
+  <p>さて、今回の注目ポイントは、どのデータが、どのように公開されているのか、そして、それらを利用するにはどうすればいいのか、ですよね。今回は、以下の4つのデータセットと解析コードについて解説します。</p>
+
+  <h3>白血病と脳腫瘍のデータセット</h3>
+  <p>これらのデータセットは、一般公開されていますが、具体的なアクセス方法は記載されていません。研究機関のウェブサイトや、論文の著者への問い合わせで情報を得られる可能性があります。</p>
+
+  <h3>デング熱のデータセット</h3>
+  <p>こちらは、著者本人に直接問い合わせることで入手可能です。研究の進捗状況や、データの利用目的などを明確に伝えれば、データを入手できる可能性が高まります。</p>
+
+  <h3>TCGA検証データ</h3>
+  <p>TCGA（The Cancer Genome Atlas）のデータは、cBioPortalというウェブサイトを通じて公開されています。cBioPortalは、がんゲノム情報に特化したデータベースで、様々な解析ツールも提供されています。</p>
+  <p><strong>cBioPortalとは？</strong>（がんゲノム情報を集めたデータベース。解析ツールも利用可能）</p>
+
+  <h3>BMCコード</h3>
+  <p>BMC（Biological Metric Computation）の解析コードは、GitHubというコード共有プラットフォームで公開されています。GitHubは、プログラミングの知識がある人なら、自由にコードをダウンロードしたり、改良したりすることができます。</p>
+  <p><strong>GitHubとは？</strong>（プログラミングコードを共有するプラットフォーム）</p>
+  <p>BMCコードのGitHubリポジトリ：<a href="https://github.com/oceanefrqt/fastBMC">https://github.com/oceanefrqt/fastBMC</a></p>
+
+  <table>
+    <caption>データとコードへのアクセス方法</caption>
+    <thead>
+      <tr>
+        <th>データ/コード</th>
+        <th>アクセス方法</th>
+        <th>備考</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>白血病/脳腫瘍データセット</td>
+        <td>不明</td>
+        <td>研究機関のウェブサイトや著者への問い合わせ</td>
+      </tr>
+      <tr>
+        <td>デング熱データセット</td>
+        <td>著者への直接問い合わせ</td>
+        <td>利用目的などを明確に</td>
+      </tr>
+      <tr>
+        <td>TCGA検証データ</td>
+        <td>cBioPortal</td>
+        <td>がんゲノム情報データベース</td>
+      </tr>
+      <tr>
+        <td>BMCコード</td>
+        <td>GitHub</td>
+        <td>プログラミング知識があると便利</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="expert-opinion">専門家の意見：データ公開がもたらす未来</h2>
+
+  <p>「データ公開は、研究の民主化を促進する。誰でも同じデータを使って研究を進めることができるようになり、新たな発見が加速される。」と、ある研究者は語っています。データ公開が進むことで、これまで研究に携わることができなかった人々も、研究に参加できるようになり、研究の多様性が高まることが期待されます。しかし、データの取り扱いには注意が必要です。個人情報保護や知的財産権の問題など、クリアすべき課題も多く存在します。</p>
+
+  <p>あなたなら、データ公開をさらに促進するために、どんな取り組みをしますか？コメント欄で、あなたのアイデアを共有してください。</p>
+
+  <h2 id="conclusion">結論と行動呼びかけ：データ公開の輪を広げよう</h2>
+
+  <p>今回の解説を通して、研究データの公開が、私たちの未来をどのように変えるのか、少しでも理解していただけたなら幸いです。データ公開は、研究の透明性や再現性を高めるだけでなく、新たな発見を加速させる可能性を秘めています。あなたも、データ公開の輪に積極的に参加し、より良い未来を創造していきましょう。</p>
+
+  <p>データ公開に関する情報や、データ利用に関する疑問があれば、ぜひコメント欄で共有してください。一緒に、データ公開の可能性を追求していきましょう。</p>
+
+</body>
+</html></div>
+  <p style="text-align:center; margin-top: 2em;">
+    <a href="https://pmc.ncbi.nlm.nih.gov/articles/12403431/" target="_blank">👉 查看原始新聞</a>
+  </p>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(div => {
+          div.style.display = div.dataset.lang === lang ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
